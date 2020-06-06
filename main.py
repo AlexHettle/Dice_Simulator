@@ -1,5 +1,7 @@
 from tkinter import *
 import random
+#A function that chooses a number between 1 and 6
+#And shows a matching dice face
 def show_face(dice):
     dice.delete("all")
     face_shown=random.randint(1,7)
@@ -30,10 +32,11 @@ def show_face(dice):
         dice.create_oval(5,59,25,79,fill="black")
         dice.create_oval(5,33,25,53,fill="black")
         dice.create_oval(59,33,79,53,fill="black")
-
+#Creates both dice faces
 def rollboth(dice1,dice2):
     show_face(dice1)
     show_face(dice2)
+#This chunk of code stes up the GUI
 window=Tk()
 window.resizable(False, False)
 window.title("Dice")
